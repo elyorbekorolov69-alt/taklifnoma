@@ -6,7 +6,7 @@
     "avgust", "sentyabr", "oktyabr", "noyabr", "dekabr"];
   var DIZAYNLAR = ["krem"];
   var q = new URLSearchParams(location.search);
-  var id = (q.get("id") || "safina-bekjon").toLowerCase().replace(/[^a-z0-9-]/g, "");
+  var id = (window.TAKLIF_ID || q.get("id") || "safina-bekjon").toLowerCase().replace(/[^a-z0-9-]/g, "");
   var $ = function (x) { return document.getElementById(x); };
 
   function oldin(url, ms) {
